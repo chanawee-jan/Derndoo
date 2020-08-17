@@ -14,9 +14,9 @@ const MainBanner = () => {
 									<h1>Experience life socially and interactively through narrative expertists </h1>
 									<p>coming soon...</p>
 									
-									<Link href="#">
-										<a className="btn btn-primary">Explore</a>
-									</Link>
+									
+										<a  href="https://bit.ly/35vLZkR" className="btn btn-primary">Explore</a>
+									
 								</div>
 							</div>
 
@@ -24,7 +24,7 @@ const MainBanner = () => {
 								<div className="banner-image">
                                     <ReactWOW delay='0.5s' animation='fadeInDown'>
                                         <img 
-                                            src={'https://storage.cloud.google.com/derndoostorage/images/oculus1.png'} 
+                                            src={'https://storage.googleapis.com/derndoostorage/images/oculus1.png'} 
                                             className="wow fadeInDown" 
                                             data-wow-delay="0.6s" 
                                             alt="man" 
@@ -40,7 +40,7 @@ const MainBanner = () => {
                                     </ReactWOW>
                                     <ReactWOW delay='0.5s' animation='fadeInLeft'>
                                         <img 
-                                            src={'https://storage.cloud.google.com/derndoostorage/images/oculus4.png'} 
+                                            src={'https://storage.googleapis.com/derndoostorage/images/oculus4.png'} 
                                             className="wow fadeInLeft" 
                                             data-wow-delay="0.6s" 
                                             alt="carpet"
@@ -53,16 +53,16 @@ const MainBanner = () => {
                                             data-wow-delay="0.6s" 
                                             alt="bin"
                                         />
-                                    </ReactWOW> */}
-                                    {/* <ReactWOW delay='0.5s' animation='bounceIn'>
+                                    </ReactWOW>
+                                    <ReactWOW delay='0.5s' animation='bounceIn'>
                                         <img 
                                             src={'https://storage.googleapis.com/derndoostorage/images/oculus2.png'} 
                                             className="wow bounceIn" 
                                             data-wow-delay="0.6s" 
                                             alt="book"
                                         />
-                                    </ReactWOW> */}
-                                    {/* <ReactWOW delay='0.5s' animation='fadeInDown'>
+                                    </ReactWOW>
+                                    <ReactWOW delay='0.5s' animation='fadeInDown'>
                                         <img 
                                             src={'https://storage.googleapis.com/derndoostorage/images/oculus2.png'} 
                                             className="wow fadeInDown" 

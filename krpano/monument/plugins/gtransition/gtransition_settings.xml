@@ -1,0 +1,32 @@
+<krpano>
+
+<!-- plugin settings -->
+<gtransition_settings 
+	ver              = "0.15"
+	transition_depth = "500"
+	transition_speed = "0.5"
+	blending_delay   = "-0.4"
+	loadscene_blend  = "BLEND(0.7, easeInQuart)"
+	loadscene_flags  = "KEEPVIEW"
+	show_contextmenu = "false"
+/>
+
+<!-- important settings! this will overwrite krpano defaults -->
+<skin_settings 
+	loadscene_flags="get:gtransition_settings.loadscene_flags"
+	loadscene_blend="get:gtransition_settings.loadscene_blend"
+	webvr_gyro_keeplookingdirection="true"
+/>
+
+<!-- onclick action fot hotspot example.
+		 to add transition effect to virtual tour
+		 you need to call gtransition_effect with two arguments:
+		 1st: hotspot ath value and 2nd: your own load scene action -->
+<action name="my_skin_hotspotstyle_click" scope="local">
+	set(skin_settings.loadscene_flags, get(gtransition_settings.loadscene_flags));
+	set(myloadpanoaction, calc('skin_loadscene(' + caller.linkedscene + ', ' + skin_settings.loadscene_blend + ')' ));
+	gtransition_effect(get(caller.ath), get(myloadpanoaction));
+</action>
+
+</krpano>
+

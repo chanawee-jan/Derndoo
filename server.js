@@ -1,53 +1,62 @@
-const express = require('express');
-const next = require('next');
-const path = require('path');
-const bodyParser = require('body-parser');
-const keys = require("./server/config/keys");
-const stripe = require('stripe')(keys.stripeSecretKey);
-const mailer = require('./mailer');
+const admin = require("firebase-admin");
+const functions = require("firebase-functions");
+const next = require("next");
+const config = require("./next.config");
 
-const dev = process.env.NODE_ENV !== 'production';
+admin.initializeApp();
 
-const app = next({ dir: '.', dev });
+const dev = process.env.NODE_ENV !== "production";
+const app = next({
+  dev,
+  // the absolute directory from the package.json file that initialises this module
+  // IE: the absolute path from the root of the Cloud Function
+  conf: config,
+});
 const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
-    const server = express();
-        // Static files
-        // https://github.com/zeit/next.js/tree/4.2.3#user-content-static-file-serving-eg-images
-    server.use('/images', express.static(path.join(__dirname, 'images'), {
-        maxAge: dev ? '0' : '365d'
-    }));
+const server = functions.https.onRequest((request, response) => {
+  // log the page.js file or resource being requested
 
-    server.use(bodyParser.json());
+  console.log("File: " + request.originalUrl);
+  return app.prepare().then(() => handle(request, response));
+});
 
-    server.get('*', (req, res) => {
-        return handle(req, res)
-    });
+exports.nextjs = { server };
 
-    server.post('/api/contact', (req, res) => {
-        const { name, email, phone, subject, text } = req.body;
-        mailer({name, email, phone, subject, text}).then(() => {
-            res.send('success')
-        }).catch(error => {
-            res.status(422).send(error)
-        });
-    });
+const express = require('express')
+const appexpress = express()
+const port = 4000
 
-    server.post('/api/stripe/checkout', async (req, res) => {
-        await stripe.charges.create({
-            amount: req.body.amount,
-            currency: 'usd',
-            description: 'StartP Next Landing Page Templates',
-            source: req.body.token.id
-        });
-        res.send({})
-    });
+const axios = require('axios');
+const https = require('https');
 
-    const PORT = process.env.PORT || 3000;
+var cors = require('cors');
+var corsOptions = {
+  origin: '*'
+};
 
-    server.listen(PORT, (err) => {
-        if (err) throw err
-        console.log(`> Read on http://localhost:${PORT}`)
-    });
+appexpress.use(cors(corsOptions))
+
+const instance = axios.create({
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false
+  })
+});
+appexpress.use(express.json())
+appexpress.all('*', (req, res) => {
+  instance[req.method.toLowerCase()](`https://167.99.66.145:8443${req.url}`, req.body).then(function (response) {
+    //res.send(req.url);
+    console.log(response);
+    res.status(response.status).send(response.data);
+  })
+    .catch(function (error) {
+      console.log(error);
+      res.status(error.response.status).send(error.response.data);
+    })
 })
+
+appexpress.listen(port, () => {
+  console.log('Done!')
+})
+
+exports.appexpress = functions.https.onRequest(appexpress);

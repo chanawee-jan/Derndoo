@@ -30,13 +30,14 @@ class Index extends React.Component {
                     {/* start-p/components/home-one/MainBanner.js */}
                     <MainBanner />
                     {/* start-p/components/home-one/BoxArea.js */}
-                    <BoxArea />
-                    <Partner />
+                    {/* <BoxArea /> */}
+                    
+                    {/* <Partner /> */}
                     
                     {/* start-p/components/Layouts/Footer.js */}
-                    <Footer />
+                    {/* <Footer /> */}
                     {/* start-p/components/Layouts/GoTop.js */}
-                    <GoTop scrollStepInPx="50" delayInMs="16.66" />
+                    {/* <GoTop scrollStepInPx="50" delayInMs="16.66" /> */}
                 </Preloader>
             </NoSSR>
         )

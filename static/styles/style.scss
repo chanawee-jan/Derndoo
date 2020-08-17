@@ -76,7 +76,6 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    text-align: center;
 }
 a {
     color: $black-color;
@@ -622,7 +621,7 @@ Main Banner CSS
     position: relative;
     height: 910px;
     z-index: 1;
-    background: transparent url(../images/banner-bg1.jpg) right top no-repeat;
+    background: transparent url(https://storage.googleapis.com/derndoostorage/images/banner-bg1.jpg) right top no-repeat;
 
     .hero-content {
         h1 {
@@ -1235,7 +1234,7 @@ About CSS
 Why Choose US CSS
 =================================================*/
 .why-choose-us {
-    background: transparent url(../images/banner-bg1.jpg) right top no-repeat;
+    background: transparent url(https://storage.googleapis.com/derndoostorage/images/banner-bg1.jpg) right top no-repeat;
     position: relative;
     z-index: 1;
 
@@ -1877,6 +1876,67 @@ Features CSS
         }
     }
 }
+
+.single-features-places {
+    position: relative;
+    border-radius: 5px;
+    -webkit-transition: $transition;
+    transition: $transition;
+    background: $white-color;
+    margin-bottom: 30px;
+    padding: {
+        left: 95px;
+        top: 30px;
+        right: 20px;
+        bottom: 30px;
+    };
+    h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .icon {
+        position: absolute;
+        text-align: center;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        background: #cdf1d8;
+        border-radius: 50%;
+        color: $light-green-color;
+        left: 20px;
+        top: 30px;
+        -webkit-transition: $transition;
+        transition: $transition;
+
+        &.bg-c679e3 {
+            color: $purple-color;
+            background: #edc3fc;
+        }
+        &.bg-eb6b3d {
+            color: #eb6b3d;
+            background: rgba(235, 107, 61, 0.3);
+        }
+    }
+    &:hover {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+
+        .icon {
+            background: $light-green-color;
+            color: $white-color;
+
+            &.bg-c679e3 {
+                background: $purple-color;
+            }
+            &.bg-eb6b3d {
+                background: #eb6b3d;
+            }
+        }
+    }
+}
+
 .hosting-features-area {
     padding-bottom: 50px;
 }
@@ -4389,7 +4449,7 @@ Page Title CSS
 .page-title-area {
     position: relative;
     z-index: 1;
-    background: transparent url(../images/banner-bg1.jpg) right top no-repeat;
+    background: transparent url(https://storage.googleapis.com/derndoostorage/images/banner-bg1.jpg) right top no-repeat;
     text-align: center;
     padding: {
         top: 190px;
@@ -6243,11 +6303,14 @@ Footer CSS
     }
 }
 .single-footer-widget {
+    
     .logo {
         margin-bottom: 20px;
+        
 
         a {
             display: inline-block;
+            
         }
     }
     h3 {

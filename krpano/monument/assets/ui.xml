@@ -1,0 +1,61 @@
+<krpano>
+
+	<layer name="A360"
+       type="image"
+       url="%SWFPATH%/assets/img/a360_white1.png"
+       keep="true"
+       visible="true"
+       enabled="true"
+       handcursor="true"
+       zorder="999"
+       align="bottomright"
+       x="10"
+       y="10"
+       scale="0.4"
+       alpha="1.0"
+       onclick="openurl('https://aroundme360.com',_blank);"
+       />
+
+	<events name="fullscreen_events" keep="true"
+	        onenterfullscreen.fullscreensupport="set(layer[fullscr].visible,false);set(layer[fullscroff].visible,true);set(layer[info].visible,false);"
+	        onexitfullscreen.fullscreensupport="set(layer[fullscr].visible,true);set(layer[fullscroff].visible,false);set(layer[info].visible,true);"
+	        />
+
+	<layer name="fullscr" keep.desktop="true" keep.android="true" keep.ios="false" style="tooltip" url="%SWFPATH%/assets/img/full.png" align="topright" zorder="2" x.desktop="22" x.tablet="22" x.mobile="15" y="30" alpha="0.8" scale="0.3" onclick="switch(fullscreen);" visible="true" tooltip="Fullscreen"/>
+	<layer name="fullscroff" keep.desktop="true" keep.android="true" keep.ios="false" style="tooltip" url="%SWFPATH%/assets/img/notfull.png" align="topright" zorder="2" x.desktop="22" x.tablet="22" x.mobile="15" y="30" alpha="0.8" scale="0.3" onclick="switch(fullscreen);" visible="false" tooltip="Exit Fullscreen"/>
+
+	<layer name="info" keep="true" url="%SWFPATH%/assets/img/info.png" style="tooltip" align="topright" zorder="2" x.desktop="22" x.tablet="22" x.mobile="15" y.desktop="80" y.android="80" y.ios="30" alpha="0.8" scale="0.3" 
+		onclick="jscall( document.getElementById('title').style.display='none';);set(layer[info].visible,false);set(layer[info2].visible,true);" visible="true" tooltip="Hide info"/>
+
+	<layer name="info2" keep="true" url="%SWFPATH%/assets/img/info.png" style="tooltip" align="topright" zorder="2" x.desktop="22" x.tablet="22" x.mobile="15" y.desktop="80" y.android="80" y.ios="30" alpha="0.8" scale="0.3" 
+		onclick="jscall( document.getElementById('title').style.display='inline';);set(layer[info].visible,true);set(layer[info2].visible,false);" visible="false" tooltip="Show info"/>
+
+	<layer name="gyro" keep.handheld="true" url="%SWFPATH%/assets/img/gyro.png" align="bottomright" x="22" y="30" alpha="1" scale="0.5" 
+		onclick="set(plugin[skin_gyro].enabled,true);set(layer[gyro].visible,false);set(layer[gyro180].visible,true);" visible="true"/>
+
+	<layer name="gyro180" keep.handheld="true" url="%SWFPATH%/assets/img/gyro180.png" align="bottomright" x="22" y="30" alpha="1" scale="0.5" 
+		onclick="set(plugin[skin_gyro].enabled,false);set(layer[gyro].visible,true);set(layer[gyro180].visible,false);" visible="false"/>
+
+	<!--<layer name="vr" keep.desktop="false" keep.mobile="true" keep.tablet="true" url="%SWFPATH%/assets/img/vr.png" align="bottomright" zorder="2" x.mobile="22" y="20" alpha="1" scale="0.5" onclick="webvr.enterVR();" visible="true"/>-->
+
+	<style name="tooltip" 
+		onover="copy(layer[tooltip].html, tooltip);
+		set(layer[tooltip].visible, true);
+		tween(layer[tooltip].alpha, 1.0, 1);
+		asyncloop(hovering, copy(layer[tooltip].x,mouse.stagex);
+		copy(layer[tooltip].y,mouse.stagey); );" 
+		onout="tween(layer[tooltip].alpha, 0.0, 0.25, default, 
+		set(layer[tooltip].visible,false), 
+		copy(layer[tooltip].x,mouse.stagex);
+		copy(layer[tooltip].y,mouse.stagey); );"/>
+
+			<!-- the 'tooltip' textfield -->
+	<layer name="tooltip" keep="true" url="%SWFPATH%/plugins/textfield.swf" parent="STAGE" visible="false" 
+		alpha="0" enabled="false" align="lefttop" edge="bottom" oy="-2" zorder="100"
+		autowidth="true" autoheight="true" background="true" backgroundcolor="black" backgroundalpha="0.4" 
+		border="false" bordercolor="0x000000" borderalpha="1.0" borderwidth="1.0" roundedge="2" shadow="0.0" 
+		shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1.0" textshadow="1" textshadowrange="6.0" 
+		textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0" 
+		css="text-align:center; color:#FFFFFF; font-family:Gotham;font-size:12px;" html=""/>
+
+</krpano>

@@ -7,7 +7,7 @@ class MyDocument extends Document {
                 <Head>
                     {/* <meta charSet="utf-8" /> */}
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                    <link rel="icon" type="image/png" href={require("../static/images/favicon.png")}></link>
+                    <link rel="icon" type="image/png" href={'https://storage.googleapis.com/derndoostorage/images/faviconderndoo.png'}></link>
                 </Head>
                 <body>
                     <Main />

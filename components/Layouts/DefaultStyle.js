@@ -49,11 +49,11 @@ class DefaultStyle extends React.Component {
                                     className="navbar-brand"
                                     onClick={() => window.location.refresh()}
                                 >
-                                    <img src={"https://storage.googleapis.com/derndoostorage/images/logo_lat.png"} alt="logo" />
+                                    <img src={"https://storage.googleapis.com/derndoostorage/images/logo_lat%20copy.png"} alt="logo" width="250" />
                                 </a>
                             </Link> 
 
-                            <button 
+                            {/* <button 
                                 onClick={this.toggleNavbar} 
                                 className={classTwo}
                                 type="button" 
@@ -63,7 +63,7 @@ class DefaultStyle extends React.Component {
                                 aria-label="Toggle navigation"
                             >
                                 <span className="navbar-toggler-icon"></span>
-                            </button>
+                            </button> */}
     
                             <div className={classOne} id="navbarSupportedContent">
                                 <ul className="navbar-nav nav ml-auto">
@@ -292,8 +292,8 @@ class DefaultStyle extends React.Component {
                             <div className="others-option">
                                 {/* <Link href="#">
                                     <a className="btn btn-light">Support</a>
-                                </Link> */}
-                                {/* <Link href="#">
+                                </Link>
+                                <Link href="#">
                                     <a className="btn btn-primary">Login</a>
                                 </Link> */}
                             </div>

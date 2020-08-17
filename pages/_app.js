@@ -9,6 +9,7 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import '../node_modules/react-modal-video/css/modal-video.min.css'
 import 'react-image-lightbox/style.css';
 import '../static/styles/style.css'
+import '../static/css/view.css';
 // If you want to change the theme color you should comment out above line and uncomment the below line and change the color names from list
 /*
 * brink-pink-style.css
@@ -42,14 +43,14 @@ export default withRedux(initStore)(
             return (
               <>
                 <DefaultSeo
-                  title="StartP - React Next IT Startups & Digital Services Template"
-                  description="StartP is a React and Bootstrap 4 based Professional website template. This has been built with React, ES6+ and as framework Next.js and Express.js."
+                  title="Derndoo - Virtual tour platform, VR platform and Social VR"
+                  description="Derndoo is a platform which help you to Experience life socially and interactively through narrative expertists"
                   openGraph={{
                     type: "website",
                     locale: "en_IE",
-                    url: "https://startp-react.envytheme.com/",
+                    url: "https://derndoo.com/",
                     site_name:
-                      "StartP - React Next IT Startups & Digital Services Template"
+                      "Derndoo - Virtual tour platform"
                   }}
                 />
                 <Provider store={store}>

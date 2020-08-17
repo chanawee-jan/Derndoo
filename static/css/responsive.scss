@@ -1647,7 +1647,6 @@ $value_six: 1550px;
 
 /* Min width 768px to Max width 991px */
 @media only #{$media} and ($feature_min : $value_two) and ($feature_max : $value_three) {
-    
     .startp-nav {
         nav {
             .others-option {
@@ -2258,7 +2257,6 @@ $value_six: 1550px;
 
 /* Min width 992px to Max width 1199px */
 @media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_five) {
-    
     .main-banner {
         .hero-content {
             h1 {
@@ -2548,7 +2546,6 @@ $value_six: 1550px;
 
 /* Min width 1550px */
 @media only #{$media} and ($feature_min : $value_six) {
-
     .iot-banner-image {
         right: 90px;
         top: 56%;
