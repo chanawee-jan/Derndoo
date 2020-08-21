@@ -2,8 +2,11 @@ import React from 'react'
 import * as Icon from 'react-feather'
 import ReactWOW from 'react-wow'
 import Link from '../common/ActiveLink'
+import UserService from '../../services/user.service'
 
 export default function AddplaceoneContent() {
+    const List = UserService.getVideoList();
+    console.log(List);
     return (
         <React.Fragment>
             <section className="features-area ptb-80 bg-f9f6f6" style={{paddingTop: 100}}>
@@ -13,6 +16,7 @@ export default function AddplaceoneContent() {
                         
                         <h2>Your tours</h2>
                         <p> Select tours from the list below.</p>
+                        
                     </div>
                     
                     <div className="mb-4 d-flex justify-content-between ">

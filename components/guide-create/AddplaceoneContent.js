@@ -6,7 +6,7 @@ import Link from '../common/ActiveLink'
 export default function AddplaceoneContent() {
     return (
         <React.Fragment>
-            <section className="features-area ptb-80 bg-f9f6f6" style={{paddingTop: 100}}>
+            <section className="features-area ptb-80 bg-f9f6f6" style={{paddingTop: 100,height:'900px'}}>
                 <div className="container">
                     
                     <div className="section-title" style={{marginBottom: 30}}>
@@ -37,77 +37,41 @@ export default function AddplaceoneContent() {
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div className="single-features-places">
-                                <div className="icon">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/The-Base-Logo.png"/>
+                                <div className="icon" style={{width: "100px"}}>
+                                    <img  src="http://167.99.66.145/pictures/DemoTour/Cork/Cork_1_T.jpg"/>
                                 </div>
 
-                                <h3>Sansiri - The BASE</h3>
-                                <p>โครงการใหม่ จากแสนสิริ บนทำเลเพชรเกษม ใกล้รถไฟฟ้า สถานีบางแค</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                                <h3>บ้านกลาง ท่องเที่ยวชุมชน</h3>
+                                <p>ภูมิปัญญาอาชีพประจำถิ่นที่สืบทอดมาจากบรรพบุรุษยาวนานกว่า 100 ปี</p>
+                                <a href='https://localhost:3001/Cork_record.html' class="btn btn-secondary-guide">create</a> 
                             </div>
                         </div>
 
                         <div className="col-lg-4 col-md-6">
                             <div className="single-features-places">
-                                <div className="icon">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/kawa-haus-logo.png"/>
+                                <div className="icon" style={{width: "100px"}}>
+                                    <img src="http://167.99.66.145/pictures/DemoTour/JWDArtSpace/JWDArtSpace_1_T.jpg"/>
                                 </div>
 
-                                <h3>Sansiri – kawa HAUS</h3>
-                                <p>คอนโดสไตล์รีสอร์ทริมน้ำใจกลางสุขุมวิท</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                                <h3>JWD Art Space</h3>
+                                <p>ดูแลงานศิลปะของคุณอย่างมีศิลปะ...</p>
+                                <a href='https://localhost:3001/JWDArtSpace_record.html' class="btn btn-secondary-guide">create</a>
                             </div>
                         </div>
 
                         <div className="col-lg-4 col-md-6">
                             <div className="single-features-places">
-                                <div className="icon bg-c679e3">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/the-line-jatujak-mochit-logo.png" />
+                                <div className="icon bg-c679e3" style={{width: "100px"}}>
+                                    <img src="http://167.99.66.145/pictures/DemoTour/Bizotel/Bizotel_1_T.jpg" />
                                 </div>
 
-                                <h3>Plus Property – The Line</h3>
-                                <p>โครงการของแสนสิริตรงข้ามสวนจตุจักร</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                                <h3>Bizotel</h3>
+                                <p>The new compact design city hotel on Rangnam Road</p>
+                                <a href='https://localhost:3001' class="btn btn-secondary-guide">create</a>
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-features-places">
-                                <div className="icon">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/The-Base-Logo.png"/>
-                                </div>
-
-                                <h3>Sansiri - The BASE</h3>
-                                <p>โครงการใหม่ จากแสนสิริ บนทำเลเพชรเกษม ใกล้รถไฟฟ้า สถานีบางแค</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-features-places">
-                                <div className="icon">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/kawa-haus-logo.png"/>
-                                </div>
-
-                                <h3>Sansiri – kawa HAUS</h3>
-                                <p>คอนโดสไตล์รีสอร์ทริมน้ำใจกลางสุขุมวิท</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-features-places">
-                                <div className="icon bg-c679e3">
-                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/the-line-jatujak-mochit-logo.png" />
-                                </div>
-
-                                <h3>Plus Property – The Line</h3>
-                                <p>โครงการของแสนสิริตรงข้ามสวนจตุจักร</p>
-                                <button type="button" class="btn btn-secondary-guide" > create</button>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6">
+                        {/* <div className="col-lg-4 col-md-6">
                             <div className="single-features-places">
                                 <div className="icon">
                                     <img src="https://storage.googleapis.com/derndoostorage/images/projects/The-Base-Logo.png"/>
@@ -142,9 +106,45 @@ export default function AddplaceoneContent() {
                                 <button type="button" class="btn btn-secondary-guide" > create</button>
                             </div>
                         </div>
+
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-features-places">
+                                <div className="icon">
+                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/The-Base-Logo.png"/>
+                                </div>
+
+                                <h3>Sansiri - The BASE</h3>
+                                <p>โครงการใหม่ จากแสนสิริ บนทำเลเพชรเกษม ใกล้รถไฟฟ้า สถานีบางแค</p>
+                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-features-places">
+                                <div className="icon">
+                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/kawa-haus-logo.png"/>
+                                </div>
+
+                                <h3>Sansiri – kawa HAUS</h3>
+                                <p>คอนโดสไตล์รีสอร์ทริมน้ำใจกลางสุขุมวิท</p>
+                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-features-places">
+                                <div className="icon bg-c679e3">
+                                    <img src="https://storage.googleapis.com/derndoostorage/images/projects/the-line-jatujak-mochit-logo.png" />
+                                </div>
+
+                                <h3>Plus Property – The Line</h3>
+                                <p>โครงการของแสนสิริตรงข้ามสวนจตุจักร</p>
+                                <button type="button" class="btn btn-secondary-guide" > create</button>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
-                <div className="col-lg-12 col-md-12">
+                {/* <div className="col-lg-12 col-md-12">
                     <div className="pagination-area">
                         <nav aria-label="Page navigation">
                             <ul className="pagination justify-content-center">
@@ -162,7 +162,7 @@ export default function AddplaceoneContent() {
                         </nav>
                     </div>
                     
-                </div>
+                </div> */}
             </section>
             
             {/* <!-- End Features Area --> */}

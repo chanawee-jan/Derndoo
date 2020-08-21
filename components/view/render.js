@@ -21,9 +21,23 @@ import image4 from "../../pics/npm1/npm1_d.jpg";
 import image5 from "../../pics/npm1/npm1_f.jpg";
 import image6 from "../../pics/npm1/npm1_b.jpg";
 import hotspot from "../../pics/icon/hotspot.png";
-import floor from "../../pics/icon/dot.png";
+//import floor from "../../pics/icon/dot.png";
+
+import * as OVRUI from 'ovrui';
+import ControllerRayCaster from 'react-vr-controller-raycaster';
 
 extend({ OrbitControls });
+
+const Controller = new VRInstance(bundle, 'StarterProject', parent, {
+  // specify your list of raycasters
+  raycasters: [
+    new ControllerRayCaster({scene, color: '#ff0000'}),
+    new OVRUI.MouseRayCaster(),
+  ],
+
+  scene: scene,
+  cursorVisibility: 'visible'
+});
 
 
 const Controls = () => {
@@ -100,7 +114,7 @@ function App() {
           <HotSpot url={hotspot} position={[0.2, -2, 4]} />
           
         </Suspense>
-        
+        <Controller/>
       </Canvas>
     </div>
   );

@@ -307,7 +307,7 @@ p:last-child {
 .btn.btn-secondary-guide {
   text-transform: capitalize;
   border-radius: 5px;
-  background-color: #9bc593;
+  background-color: #01426A;
   color: white;
   padding: 3px 12px;
   -webkit-box-shadow: 5px 5px 5px #eaf5e7;
@@ -319,7 +319,7 @@ p:last-child {
   position: absolute;
   right: 5px;
   bottom: 5px;
-  
+  width: 110px;
 }
 
 .btn.btn-secondary-guide-pending {
@@ -351,13 +351,13 @@ p:last-child {
 
 .btn.btn-secondary-guide:not(:disabled):not(.disabled).active, .btn.btn-secondary-guide:not(:disabled):not(.disabled):active, .show > .btn.btn-secondary-guide.dropdown-toggle {
   color: #ffffff;
-  background-color: #44ce6f;
-  border-color: #44ce6f;
+  background-color: #01426A;
+  border-color: #01426A;
 }
 
 .btn.btn-secondary-guide:not(:disabled):not(.disabled).active:focus, .btn.btn-secondary-guide:not(:disabled):not(.disabled):active:focus, .show > .btn.btn-secondary-guide.dropdown-toggle:focus {
-  -webkit-box-shadow: 5px 5px 5px #e9caf5;
-          box-shadow: 5px 5px 5px #e9caf5;
+  -webkit-box-shadow: 5px 5px 5px #DDCBA4;
+          box-shadow: 5px 5px 5px #DDCBA4;
 }
 
 .btn.btn-secondary-guide:focus {
@@ -365,15 +365,15 @@ p:last-child {
 }
 
 .btn.btn-secondary-guide:hover, .btn.btn-secondary-guide:focus {
-  -webkit-box-shadow: 5px 5px 5px #e9caf5;
-          box-shadow: 5px 5px 5px #e9caf5;
+  -webkit-box-shadow: 5px 5px 5px #DDCBA4;
+          box-shadow: 5px 5px 5px #DDCBA4;
 }
 
 /*btn-secondary-guide-prerecord*/
 .btn.btn-secondary-guide-prerecord {
   text-transform: capitalize;
   border-radius: 5px;
-  background-color: #9bc593;
+  background-color: #01426A;
   color: white;
   padding: 3px 12px;
   -webkit-box-shadow: 5px 5px 5px #eaf5e7;
@@ -446,6 +446,7 @@ p:last-child {
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: 500;
+
   width : 110px;
 }
 
@@ -2206,7 +2207,7 @@ Features CSS
   transition: 0.5s;
   background: #ffffff;
   margin-bottom: 20px;
-  padding-left: 95px;
+  padding-left: 145px;
   padding-top: 20px;
   padding-right: 10px;
   padding-bottom: 15px;
